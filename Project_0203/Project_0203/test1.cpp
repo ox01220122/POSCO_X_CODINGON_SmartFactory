@@ -94,7 +94,7 @@ int main() {
 
 	//sizeof() : sizeof안에 변수 or type을 인자로 넘겨줌. 크기를 byte단위로 구함 
 
-	string friends[3] = { "홍길동1" ,"홍길동2","홍길동3" };
+	string friends[3] = {"홍길동1","홍길동2","홍길동3"};
 	for (int i = 0; i < sizeof(friends)/sizeof(string); i++)  // 4byte(string)가 3개 있으니까 12byte가 나오므로 연산필요
 		//(string의 size로 나눠줌)
 		cout << friends[i] << endl;
