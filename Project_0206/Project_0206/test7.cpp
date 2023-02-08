@@ -9,24 +9,6 @@ int main() {
 	vector <int> vec1;
 	vector <int> vec2;
 	
-	/*
-	vec1.push_back(1);
-	vec1.push_back(0);
-
-	for (int i = 0; i < 3; i++)
-		vec2.push_back(i);
-
-	vec_2d.push_back(vec1);
-	vec_2d.push_back(vec2);
-
-	for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 4; j++){
-			cout<<vec_2d[i][j]<<" ";
-		}
-		cout<<endl;
-	}
-	*/
 	
 
 	//3*2행렬을 만든다  (다 0으로 초기화 되어있음) (3행2열)

@@ -14,11 +14,9 @@ int main() {
 		cin >> number;
 		add_num.push_back(number);
 	}
+
 	for (int i = 0; i < add_num.size(); i++)
-	{
 		add_ += add_num.at(i);
-	}
+
 	cout << "사용자가 입력한 수의 합은 : " << add_ << endl;
-
-
 }
