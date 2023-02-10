@@ -14,64 +14,38 @@ public:
 		item_num = 0;
 	}
 
-	void name_chage(string name) { //이름 바꿔주기 
+	void name_chage(string name) {
 		this->name = name;
-	}
-	void level_up() { //레벨업
+		cout << "바뀐 이름은 : " << this->name << endl;}
+
+	void level_up() { 
 		level++;
-		//this->level = level+1;
-		cout << endl<<"레벨은 :" << level;
-	}
-	void add_item() { //아이템 +1  (현재 아이템 수 받아오기)
+		cout << endl<<"레벨은 :" << level;}
+
+	void add_item() {
 		item_num++;
-		//this->item_num = item_num+1;
-		cout << endl << "가지고 있는 아이템 수는 :" << item_num<<endl;
-	}
-	void use_item() { //아이템 -1
-		if (this->item_num <=0)
-		{
-			cout << "아이템 수는 0 입니다";
-		}
+		cout << endl << "가지고 있는 아이템 수는 :" << item_num<<endl;}
+
+	void use_item() {
+		if (this->item_num <=0){cout << "아이템 수는 0 입니다";}
 		else {
 			item_num--;
-			//this->item_num = item_num - 1;
-			cout << endl << "가지고 있는 아이템 수는 :" << item_num << endl;
+			cout << endl << "가지고 있는 아이템 수는 :" << item_num << endl;}
 		}
 
-	}
-
-
-
-	//getter
-	int get_level() { return level; }
-	int get_item_num() { return item_num;}
 	string get_name() { return name; }
-
-	//setter
-	void set_level(int level) { this->level = level; } //레벨 변경
-	void set_item_num(int item_num) { this->item_num = item_num; } //아이템 수 변경
-	void set_name(string name) { this->name = name;}
-
-	
-
-
+	void set_name(string name) { this->name = name; }
 };
+
 int main() {
 	string name_in;
 	int number;
 
 	cout << "캐릭터의 이름을 입력하세요 : ";
 	cin >> name_in;
-	Character g(name_in); //생성자에서 이름, 레벨, 아이템수 넣어줬음 
-
-
+	Character g(name_in); 
 	string name = g.get_name();
-	int level = g.get_level();
-	int item_num = g.get_item_num();
-
 	g.set_name(name);
-	g.set_level(level);
-	g.set_item_num(item_num);
 	
 	cout << endl << "캐릭터를 어떻게 조작하시겠습니까?" << endl;
 	cout << "0: 종료" << endl;
@@ -79,44 +53,40 @@ int main() {
 	cout << "2를 입력하면, level up" << endl;
 	cout << "3을 입력하면, item 줍줍" << endl;
 	cout << "4를 입력하면, item 사용" << endl;
+
 	while (true)
 	{
 		cout << endl << "캐릭터를 어떻게 조작하시겠습니까?" << endl;
 		cin >> number;
-
-		switch (number)
-		{
+		switch (number){
 		case 0:
-			exit(1); //종료
-		case 1://이름 변경 
-			name = g.get_name();
+			exit(1);
+		
+		case 1: 
 			cout << "바꿀 이름을 입력하세요 : ";
 			cin >> name;
-			g.name_chage(name);
-			cout << "바뀐 이름은 " << g.get_name() << "입니다" << endl;
+			g.name_chage(name);	
 			break;
-		case 2://레벨 업
-			//level = g.get_level();
+
+		case 2:
 			cout << "레벨업 합니다" << endl;
 			g.level_up();		
 			break;
+
 		case 3:
-			//item_num = g.get_item_num();
 			cout << "아이템을 주웠습니다" << endl;
 			g.add_item();			
 			break;
+
 		case 4:
-			//item_num = g.get_item_num();
 			cout << "아이템을 사용합니다 " << endl;
 			g.use_item();
 			break;
+
 		default:
 			cout << "숫자를 잘못 입력하셨습니다" << endl << "다시 입력하세요 " << endl;
 			break;
 		}
 	}
-
-
-
 	return 0;
 }
