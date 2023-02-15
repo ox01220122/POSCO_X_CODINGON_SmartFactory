@@ -1,4 +1,5 @@
-using namespace std;  //std namespace 내에 있는 모든 요소에 대한 접근을 풀어준다 (main문 안에서 풀어주면 main안에서만 사용가능)
+using namespace std;  
+//std namespace 내에 있는 모든 요소에 대한 접근을 풀어준다 (main문 안에서 풀어주면 main안에서만 사용가능)
 #include <iostream>
 #include <string>
 

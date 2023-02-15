@@ -5,7 +5,6 @@ using namespace std;
 #include <vector>
 int main() {
 	
-
 	string name[3];
 	string num[3];
 	
@@ -28,13 +27,6 @@ int main() {
 	
 	while (getline(file_r, line)) {cout << line << endl;}
 	
-
-
-
-	
-	
-	
-
 
 	return 0;
 }

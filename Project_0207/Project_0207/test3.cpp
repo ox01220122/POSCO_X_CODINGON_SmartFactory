@@ -14,9 +14,6 @@ int main() {
 		return -1;
 	}
 		
-
-
-
 	//file >> str>> str2; //파일 안 내용을 string형 변수에 저장
 	
 	/*
