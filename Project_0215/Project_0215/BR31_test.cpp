@@ -29,7 +29,7 @@ int main() {
 			cout << "사용자가 부른 숫자"<<endl;
 			for (int i = num_add + 1; i <= num_add + input_num; i++) {
 				
-				if (i == 31) {
+				if (i == 32) {
 					input_end = 1;
 					break;
 				}

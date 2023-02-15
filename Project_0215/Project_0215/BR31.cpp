@@ -73,6 +73,5 @@ int main() {
 		F_input_com(&com_num);
 		F_print_com(&num_count, &com_end, &com_num);
 	}
-
 	return 0;
 }
