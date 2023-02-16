@@ -13,7 +13,7 @@ int main() {
 	int result_num = 7;
 
 
-	while (count != 6) {
+	while (count != 6) {//랜덤 숫자 생성(중복제거)
 		int temp = 0;
 		rand_num = (rand() % 25) + 1;
 		if (com_num.size() != 0) {
@@ -26,8 +26,8 @@ int main() {
 			count++;
 		}
 	}
-	
 	cout <<"랜덤 숫자가 생성되었습니다! "<<endl;
+
 	count = 0;
 	while (count != 6) {
 		int temp = 0;

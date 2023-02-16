@@ -42,11 +42,9 @@ int main() {
 	bool input_end=0, com_end=0;
 
 	int num_count = 0;
-	//int *pNum_count = &num_count;
-	
 
-	while (true)
-	{
+
+	while (true){
 		if (com_end) {
 			cout << "사용자가 이겼습니다!";
 			exit(1);
