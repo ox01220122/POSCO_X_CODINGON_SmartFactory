@@ -20,9 +20,9 @@ int main() {
 		count_time = endTime - startTime;
 
 		if (input_word[0] == change_word) {
-			save_word.push_back(input_word);
-			
+			save_word.push_back(input_word);			
 		}
+
 		else {
 			cout << "Æ²·È½À´Ï´Ù" << endl;
 		}

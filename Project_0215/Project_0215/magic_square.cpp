@@ -1,12 +1,9 @@
 #include <iostream>
-#include <string>
 #include <vector>
 #include <cmath>
 using namespace std;
 int main() {
 	int input_odd_num = 0;
-	int square_input;
-	int i = 0;
 
 	while (input_odd_num==0) { //홀수를 입력받기!
 		cout << "마방진 행, 혹은 열의 수를 자연수로 입력해 주세요(홀수 입력) : ";
@@ -17,14 +14,13 @@ int main() {
 		}
 	}
 
-	square_input = pow(input_odd_num, 2);
+
 	vector<vector<int> > magic_square(input_odd_num, vector<int>(input_odd_num, 0));
 	int row = 0;
 	int col = floor(input_odd_num / 2.0);
 	magic_square[row][col] = 1;  //첫번째 행 가운데 1을 넣어주고 시작
-
-		
-	for (int i = 2; i <= square_input; i++) {//2부터 숫자 넣어주기
+	
+	for (int i = 2; i <= pow(input_odd_num, 2); i++) {//2부터 숫자 넣어주기
 		if (col + 1 == input_odd_num && row - 1 < 0) {//행과 열이 범위를 벗어났을 경우
 			if (row - 1 < 0) { row = input_odd_num - 1; }
 			else { row -= 1; }
@@ -40,7 +36,6 @@ int main() {
 			}
 			else {	magic_square[row][col] = i;	}
 		}
-
 
 		else if (col + 1 == input_odd_num) {//열이 범위를 벗어났을 경우 
 			row -= 1;
