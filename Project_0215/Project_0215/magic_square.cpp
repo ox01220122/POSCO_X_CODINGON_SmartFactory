@@ -39,9 +39,7 @@ int main() {
 					col = input_odd_num - 1;
 					magic_square[row][col] = i;
 				}
-				else {
-					magic_square[row][col] = i;
-				}
+				else {	magic_square[row][col] = i;	}
 			}
 
 			else if (col + 1 == input_odd_num) {//열이 범위를 벗어났을 경우 
