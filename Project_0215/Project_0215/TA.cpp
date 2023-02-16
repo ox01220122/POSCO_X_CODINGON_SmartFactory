@@ -11,7 +11,7 @@ int main() {
 	
 
 	cout << save_word.front() << endl;
-	while (count_time <= 5000) {
+	while (count_time <= 30000) {
 		cout << "다음 단어를 입력하세요 : ";
 		cin >> input_word;
 		cout << input_word[input_word.size() - 1] << endl;
