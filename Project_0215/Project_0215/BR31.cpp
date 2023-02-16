@@ -39,13 +39,10 @@ int main() {
 
 	srand(time(NULL));
 	int input_num=0, com_num=0;
-	int* pInput_num = &input_num, * pCom_num = &com_num;
-
 	bool input_end=0, com_end=0;
-	bool* pInput_end = &input_end, * pCom_end = &com_end;
 
 	int num_count = 0;
-	int *pNum_count = &num_count;
+	//int *pNum_count = &num_count;
 	
 
 	while (true)

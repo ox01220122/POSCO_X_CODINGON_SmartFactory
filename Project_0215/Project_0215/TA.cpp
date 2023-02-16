@@ -8,18 +8,18 @@ int main() {
 	string input_word;
 	double count_time = 0;
 	clock_t startTime = clock();
-	
 
 	cout << save_word.front() << endl;
 	while (count_time <= 30000) {
+		char change_word = save_word.back().back();
 		cout << "다음 단어를 입력하세요 : ";
 		cin >> input_word;
 		cout << input_word[input_word.size() - 1] << endl;
-		cout << save_word.back().back() << endl;
+		cout << change_word << endl;
 		clock_t endTime = clock();
 		count_time = endTime - startTime;
 
-		if (input_word[0] == save_word.back().back()) {
+		if (input_word[0] == change_word) {
 			save_word.push_back(input_word);
 			
 		}
