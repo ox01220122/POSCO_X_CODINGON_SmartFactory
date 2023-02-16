@@ -25,7 +25,6 @@ int main() {
 
 		
 		for (int i = 2; i <= square_input; i++) {//2부터 숫자 넣어주기
-
 			if (col + 1 == input_odd_num && row - 1 < 0) {//행과 열이 범위를 벗어났을 경우
 				if (row - 1 < 0) { row = input_odd_num - 1; }
 				else { row -= 1; }
@@ -41,6 +40,7 @@ int main() {
 				}
 				else {	magic_square[row][col] = i;	}
 			}
+
 
 			else if (col + 1 == input_odd_num) {//열이 범위를 벗어났을 경우 
 				row -= 1;
@@ -64,8 +64,8 @@ int main() {
 				magic_square[row][col] = i;
 			}
 		}
-		//마방진 출력
-		for (int j = 0; j < input_odd_num; j++) {
+		
+		for (int j = 0; j < input_odd_num; j++) {//마방진 출력
 			for (int k = 0; k < input_odd_num; k++) {
 				cout << magic_square[j][k] << " ";
 			}
