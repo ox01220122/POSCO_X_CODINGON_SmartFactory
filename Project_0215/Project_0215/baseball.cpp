@@ -10,7 +10,7 @@ int main() {
 	srand(time(NULL));
 	int com_num = 0;
 	int com_arr[3], user_arr[3];
-	int strike_
+	int strike_count = 0, ball_count;
 	
 	for (int i = 0; i < 3; i++){//컴퓨터 랜덤숫자 생성 
 		com_num = (rand() % 3) + 1;
@@ -28,14 +28,13 @@ int main() {
 		cin >> user_arr[0] >> user_arr[1] >> user_arr[2];
 
 		for (int i = 0; i < 3; i++){//strike 검사 
-			if (com_arr[i] == user_arr[i]){
-
+			if (com_arr[i] == user_arr[i]){	strike_count++;	}
+			for (int j = 0; j < 3; j++) {//ball 검사 
+				if(com_arr[i] == user_arr[j])
 			}
 		}
 
-		for (int i = 0; i < 3; i++){//ball 검사 
-
-		}
+		
 
 
 	}
