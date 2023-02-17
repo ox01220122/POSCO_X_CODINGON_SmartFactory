@@ -14,12 +14,13 @@ int main() {
 		}
 	}
 
-	vector<vector<int> > magic_square(input_odd_num, vector<int>(input_odd_num, 0));
+	vector<vector<int>> magic_square(input_odd_num, vector<int>(input_odd_num, 0));
 	int row = 0;
 	int col = floor(input_odd_num / 2.0);
 	magic_square[row][col] = 1;  //첫번째 행 가운데 1을 넣어주고 시작
 	
 	for (int i = 2; i <= pow(input_odd_num, 2); i++){//2부터 숫자 넣어주기
+
 		if (col + 1 == input_odd_num && row - 1 < 0){//행과 열이 범위를 벗어났을 경우
 			if (row - 1 < 0) { row = input_odd_num - 1; }
 			else { row -= 1; }
@@ -27,7 +28,6 @@ int main() {
 			if (col + 1 == input_odd_num) { col = 0; }
 			else { col += 1; }
 
-			magic_square[row][col] = i;
 
 			if (magic_square[row][col] != 0){
 				row = 1;
