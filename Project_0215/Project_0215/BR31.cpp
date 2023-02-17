@@ -2,24 +2,26 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include <ctime>
-void F_print(int* num_count, bool* com_end, int* com_num , int number) {
-	for (int j = *num_count + 1; j <= *num_count + *com_num; j++) {
-		if (j == number) {
-			*com_end = 1;
+void F_print(int* num_count, bool* bool_end, int* count_num , int range) { //user, 컴퓨터 숫자출력 & 숫자 카운트 
+	for (int j = *num_count + 1; j <= *num_count + *count_num; j++) {
+		if (j == range) {
+			*bool_end = 1;
 			break;
 		}
 		else { cout << j << endl; }
 	}
-	*num_count += *com_num;
-	if (*num_count == number) { *com_end = 1; }
+	*num_count += *count_num;
+	if (*num_count == range) { *bool_end = 1; }
 }
-void F_input_user(int *input_num) {
+
+void F_input_user(int *input_num) {//user 개수 입력받기 
 	cout << "개수를 입력하세요";
 	cin >> *input_num;
 	cout << *input_num << "을 입력하셨습니다" << endl;
 }
-void F_input_com(int *com_num) {
-	*com_num = (rand() % 3) + 1;  //숫자 바뀔 때 수정
+
+void F_input_com(int *com_num) {//컴퓨터 랜덤 번호 생성 
+	*com_num = (rand() % 3) + 1; 
 	cout << "컴퓨터가 부른 숫자 : " << *com_num << endl;
 }
 
@@ -47,7 +49,7 @@ int main() {
 			cout << "범위를 벗어났습니다. 다시입력하세요" << endl;
 			continue;
 		}
-		if (input_end) { continue; }  //사용자가 바뀔 경우에 수정해주기 
+		if (input_end) { continue; } 
 		F_input_com(&com_num);
 		F_print(&num_count, &com_end, &com_num,31);
 	}
