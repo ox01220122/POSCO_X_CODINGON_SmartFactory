@@ -2,28 +2,16 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include <ctime>
-void F_print_user(int* pNum_count, bool* pInput_end,int* pInput_num) {
-	for (int i = *pNum_count+1; i <= *pNum_count + *pInput_num; i++){
-		if (i == 32) {
-			*pInput_end = 1;
-			break;
-		}
-		else { cout << i << endl; }
-	}
-	*pNum_count += *pInput_num;
-	if (*pNum_count ==32){ *pInput_end = 1;}
-}
-
-void F_print_com(int* pNum_count, bool* pCom_end, int* pCom_num) {
-	for (int j = *pNum_count + 1; j <= *pNum_count + *pCom_num; j++) {
-		if (j == 31) {
-			*pCom_end = 1;
+void F_print(int* num_count, bool* com_end, int* com_num , int number) {
+	for (int j = *num_count + 1; j <= *num_count + *com_num; j++) {
+		if (j == number) {
+			*com_end = 1;
 			break;
 		}
 		else { cout << j << endl; }
 	}
-	*pNum_count += *pCom_num;
-	if (*pNum_count == 31) { *pCom_end = 1; }
+	*num_count += *com_num;
+	if (*num_count == number) { *com_end = 1; }
 }
 void F_input_user(int *input_num) {
 	cout << "개수를 입력하세요";
@@ -36,13 +24,9 @@ void F_input_com(int *com_num) {
 }
 
 int main() {
-
 	srand(time(NULL));
-	int input_num=0, com_num=0;
+	int input_num = 0, com_num = 0, num_count = 0;
 	bool input_end=0, com_end=0;
-
-	int num_count = 0;
-
 
 	while (true){
 		if (com_end) {
@@ -57,16 +41,15 @@ int main() {
 		F_input_user(&input_num);
 
 		if (input_num <= 3 && input_num > 0){
-			F_print_user(&num_count, &input_end, &input_num);
+			F_print(&num_count, &input_end, &input_num, 32);		
 		}
 		else {
 			cout << "범위를 벗어났습니다. 다시입력하세요" << endl;
 			continue;
 		}
-
 		if (input_end) { continue; }  //사용자가 바뀔 경우에 수정해주기 
 		F_input_com(&com_num);
-		F_print_com(&num_count, &com_end, &com_num);
+		F_print(&num_count, &com_end, &com_num,31);
 	}
 	return 0;
 }
