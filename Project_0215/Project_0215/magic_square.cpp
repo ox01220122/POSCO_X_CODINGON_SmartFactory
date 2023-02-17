@@ -13,7 +13,6 @@ int main() {
 			input_odd_num = 0;
 		}
 	}
-
 	vector<vector<int>> magic_square(input_odd_num, vector<int>(input_odd_num, 0));
 	int row = 0;
 	int col = floor(input_odd_num / 2.0);
