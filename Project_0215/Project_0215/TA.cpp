@@ -17,15 +17,13 @@ int main() {
 		cout << input_word[input_word.size() - 1] << endl;
 		cout << change_word << endl;
 		clock_t endTime = clock();
-		count_time = endTime - startTime;
+		count_time = endTime - startTime; //입력 했을 때 30초 초과 시 반복문 탈출
 
 		if (input_word[0] == change_word) {
 			save_word.push_back(input_word);			
 		}
 
-		else {
-			cout << "틀렸습니다" << endl;
-		}
+		else {	cout << "틀렸습니다" << endl;	}
 	}
 	cout << "시간이 초과 되었습니다!" << endl;
 	cout << "입력한 단어의 개수는 : "<< save_word .size()-2 << "입니다";
