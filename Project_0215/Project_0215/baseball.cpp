@@ -9,7 +9,6 @@ int main() {
 	int com_arr[3], user_arr[3];
 	int strike_count=0, ball_count=0;
 	
-
 	for (int i = 0; i < 3; i++){//컴퓨터 랜덤숫자 생성 
 		com_num = (rand() % 3) + 1;
 		for (int c : com_arr) {
@@ -32,15 +31,10 @@ int main() {
 				if (com_arr[i] == user_arr[j]) { ball_count++; }
 			}
 		}
-		/*
-		if (strike_count>=ball_count){ ball_count -= strike_count;}
-		else if (ball_count == 3) { ball_count -= strike_count; }
-		*/
 		ball_count -= strike_count;
 		cout << "strike : " << strike_count << "ball : " << ball_count << endl;
 		repeat++;
 	}
-
 	cout << repeat << "만에 맞췄습니다!" << endl;
 
 
