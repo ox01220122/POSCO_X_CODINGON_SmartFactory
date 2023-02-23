@@ -6,8 +6,8 @@ int main() {
 
 	srand(time(NULL));
 	int com_num = 0, user_num=0;
-	int range_num = 3; //조건이 변경될 때 변수의 숫자만 바꿔주기
-	int com_arr[3], user_arr[3];
+	const int range_num = 3; //조건이 변경될 때 변수의 숫자만 바꿔주기
+	int com_arr[range_num], user_arr[range_num];
 	int strike_count=0, ball_count=0;
 	
 	
