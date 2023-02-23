@@ -3,8 +3,15 @@ using namespace std;
 #include <ctime>
 #include <vector>
 #include <string>
-int main() {
 
+void print_result(vector <int> com_num, int result_num) { //결과 출력 함수 
+	cout << "당첨번호 공개!" << endl;
+	for (int c : com_num) { cout << c << " "; } //출력
+	cout << endl << "-----------------------------------------" << endl;
+	cout << "결과 : " << result_num << "등 입니다" << endl;
+}
+
+int main() {
 	srand(time(NULL));
 	int rand_num = 0;
 	vector <int> com_num;
@@ -15,7 +22,7 @@ int main() {
 
 	while (count != 6) {//랜덤 숫자 생성(중복제거)
 		int temp = 0;
-		rand_num = (rand() % 25) + 1;
+		rand_num = (rand() % 25) + 1;  //1~25 숫자 
 		if (com_num.size() != 0) {
 			for (int j = 0; j < com_num.size(); j++) {
 				if (com_num[j] == rand_num) { temp = 1; }
@@ -49,17 +56,13 @@ int main() {
 	}
 
 
-
 	for (int i = 0; i < 6; i++){
 		for (int j = 0; j < 6; j++) {
 			if (com_num[i] == user_num[j]) { --result_num; }
 		}
 	}
+	print_result(com_num, result_num);
 
-		cout << "당첨번호 공개!" << endl;
-		for (int c : com_num) { cout << c << " "; } //출력
-		cout << endl << "-----------------------------------------" << endl;
-		cout << "결과 : " << result_num << "등 입니다" << endl;
 
 	return 0;
 }
