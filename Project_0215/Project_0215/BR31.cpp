@@ -41,7 +41,7 @@ int main() {
 		F_input_user(&input_num);
 
 		if (input_num <= 3 && input_num > 0){
-			F_print(&num_counter, &input_end, input_num, 32);
+			F_print(&num_counter, &input_end, input_num, 31);
 		}
 		else {
 			cout << "범위를 벗어났습니다. 다시입력하세요" << endl;
@@ -49,7 +49,7 @@ int main() {
 		}
 		if (input_end) { continue; } 
 		F_input_com(&com_num);
-		F_print(&num_counter, &com_end, com_num,32);
+		F_print(&num_counter, &com_end, com_num,31);
 	}
 	return 0;
 }
