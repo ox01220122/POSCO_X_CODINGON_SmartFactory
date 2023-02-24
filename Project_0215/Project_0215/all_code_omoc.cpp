@@ -141,6 +141,8 @@ void print_line() {
 	cout << "┘";
 	gotoxy(0, FIELD_HEIGHT);
 	cout << "└";
+
+	//선 그리기
 	/*
 	for (size_t j = 0; j < 15; j++)
 	{
@@ -186,13 +188,11 @@ int get_input(WORD* vkey, COORD* pos)
 			return MOUSE_EVENT;
 		}
 		break;
-
 	}
-
-	//    FlushConsoleInputBuffer(CIN);
 	return 0;
 }
 
+/*
 void gotoxy(int x, int y)      // 좌표 보내기 gotoxy
 {
 	COORD Cur;
@@ -200,10 +200,9 @@ void gotoxy(int x, int y)      // 좌표 보내기 gotoxy
 	Cur.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cur);
 }
-
+*/
 void main()
 {
-
 	GameStartFild_test();
 	DWORD mode;
 	WORD key;
@@ -219,7 +218,6 @@ void main()
 	// 마우스 활성화
 	GetConsoleMode(CIN, &mode);
 	SetConsoleMode(CIN, mode | ENABLE_MOUSE_INPUT);
-
 	while (1)
 	{
 		if (be_input())

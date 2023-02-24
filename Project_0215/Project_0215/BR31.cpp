@@ -3,11 +3,11 @@
 using namespace std;
 void F_print(int* num_counter, bool* bool_end, int creat_num , int range) { //user, 컴퓨터 숫자출력 & 숫자 카운트 
 	for (int j = *num_counter + 1; j <= *num_counter + creat_num; j++) {
-		if (j == range+1) {
-			*bool_end = 1;
+		cout << j << endl;
+		if (j == range) {
+			*bool_end = 1; //결국 32에 종료한다 
 			break;
 		}
-		else { cout << j << endl; }
 	}
 	*num_counter += creat_num;
 }
@@ -41,7 +41,7 @@ int main() {
 		F_input_user(&input_num);
 
 		if (input_num <= 3 && input_num > 0){
-			F_print(&num_counter, &input_end, input_num, 31);
+			F_print(&num_counter, &input_end, input_num, 32);
 		}
 		else {
 			cout << "범위를 벗어났습니다. 다시입력하세요" << endl;
@@ -49,7 +49,7 @@ int main() {
 		}
 		if (input_end) { continue; } 
 		F_input_com(&com_num);
-		F_print(&num_counter, &com_end, com_num,31);
+		F_print(&num_counter, &com_end, com_num,32);
 	}
 	return 0;
 }
