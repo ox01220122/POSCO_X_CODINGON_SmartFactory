@@ -1,7 +1,6 @@
-using namespace std;
 #include <iostream>
-#include <string>
 #include <ctime>
+using namespace std;
 void F_print(int* num_counter, bool* bool_end, int creat_num , int range) { //user, 컴퓨터 숫자출력 & 숫자 카운트 
 	for (int j = *num_counter + 1; j <= *num_counter + creat_num; j++) {
 		if (j == range+1) {
