@@ -5,7 +5,7 @@ void F_print(int* num_counter, bool* bool_end, int creat_num , int range) { //us
 	for (int j = *num_counter + 1; j <= *num_counter + creat_num; j++) {
 		cout << j << endl;
 		if (j == range) {
-			*bool_end = 1; //결국 32에 종료한다 
+			*bool_end = 1; 
 			break;
 		}
 	}

@@ -1,8 +1,7 @@
-using namespace std;
 #include <iostream>
 #include <ctime>
 #include <vector>
-#include <string>
+using namespace std;
 
 void print_result(vector <int> com_num, int result_num) { //결과 출력 함수 
 	cout << "당첨번호 공개!" << endl;
